@@ -1,0 +1,29 @@
+﻿@model BdUsuarios.Models.Users
+
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "_Layout";
+}
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Densidad Variable</title>
+</head>
+
+<body>
+
+    <div>
+        <h3>Registre los cambios de usuario</h3>
+        <form asp-action="Guardar" method="post">
+            <input hidden asp-for="IdUser" />
+            <label>Usuario: <input class="form-control" asp-for="Usuario" type="text" name="usuario" /></label><br />
+            <label>Email: <input class="form-control" asp-for="Email" type="text" name="email" required /></label><br />
+            <label>Contraseña: <input class="form-control" asp-for="Contraseña" type="text" name="contraseña" required /></label><br />
+            <input type="submit" name="enviar" value="enviar" />
+        </form>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,44 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+
+}
+
+<div class="row">
+    <form action="Enter">
+        <div class="col-lg-6 col-lg-offset-3">
+            Usuario
+            <input type="text" name="user" />
+            Pasword
+            <input type="password" name="password" />
+            <input type="submit" class="btn btn-success" value="Entrar" />
+        </div>
+    </form>
+</div>
+
+@*@section Scripts
+{
+    <script>
+    $(Document).ready(function)
+    {
+        $("#frm").submit(function (e)
+        {
+            e.preventDefault();
+            url = "@Url.Content("~/Access/Enter")"
+            parametros = $(this).serialize();
+
+            $.post(url, parametros, function (data)
+            {
+                if (data == "1")
+                {
+                    document.location.href = "@Url.Content("~/Index")"
+                }
+                else
+                {
+                    alert(data)
+                }
+            })
+        })
+    }
+    </script>*@
+}
